@@ -1,0 +1,284 @@
+@import "../../../styles/style_vars"
+.header
+  width: 100%
+  background: #050e60
+  height: 60px
+  box-shadow: 0 0 10px #0617359e
+  position: fixed
+  z-index: 1000
+
+  .close_btn_wrapper
+    display: none
+    color: #FFFFFF
+    font-size: 30px
+
+  &__dropdown
+    display: flex
+    width: 75%
+    justify-content: space-between
+
+  &__icon
+    font-size: 20px
+    color: salmon
+    transition: color .3s
+
+    &:hover
+      color: #d54639
+
+  &__container
+    position: relative
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 100%
+
+  &__logo
+    width: 125px
+
+  &__mobile
+    &__right
+      display: none
+      min-width: 85px
+
+  &_auth__btn
+    margin-left: 15px
+    margin-top: 0
+
+  &_auth__btn:first-child
+    margin-left: 0
+
+  &__auth
+    display: flex
+    position: relative
+
+    &__block
+      cursor: pointer
+      color: #ffffff
+      box-shadow: var(--main-shadow)
+      padding: 7px 15px
+      border-radius: 12px
+      display: flex
+      transition: all .3s
+      position: relative
+
+      &:hover
+        background: #1f4599
+
+      &__item
+        position: relative
+        margin-right: 15px
+        cursor: pointer
+        display: inline-block
+
+        &:last-child
+          margin-right: 0
+
+      &__wrapper
+        display: flex
+        align-items: center
+
+        button
+          position: relative
+          border: none
+          margin-right: 15px
+
+      .avatar
+        margin-left: 10px
+        display: flex
+        align-items: center
+
+        &__template
+          width: 30px
+          height: 30px
+
+        img
+          height: 30px
+          width: 30px
+          border-radius: 50%
+
+        .auth__arrow
+          margin-left: 5px
+          margin-top: 0
+          transform: rotate(0deg)
+          transition: all .4s
+
+          &.active
+            animation-name: arrow_animation
+            animation-duration: .4s
+            animation-iteration-count: 1
+            margin-top: 12px
+            transform: rotate(-180deg)
+
+@keyframes arrow_animation
+  0%
+    margin-top: 0
+    transform: rotate(0deg)
+  100%
+    margin-top: 12px
+    transform: rotate(-180deg)
+
+
+.burger
+  position: absolute
+  width: 23px
+  height: 3px
+  right: 0
+  top: 8px
+  background-color: #fff
+  border-radius: 3px
+
+
+.header_burger
+  display: block
+  position: relative
+  height: 22px
+  width: 29px
+  z-index: 1000
+
+  &.collapsed
+    .burger
+      display: none
+
+    &:after
+      transform: rotate(-45deg)
+      bottom: 11px
+
+    &:before
+      transform: rotate(45deg)
+      top: 8px
+
+  &.active
+    right: 9px !important
+    left: 88%
+
+  &:hover
+    cursor: pointer
+
+  &:after,
+  &:before
+    position: absolute
+    content: ""
+    border-radius: 3px
+    background-color: #fff
+    width: 29px
+    height: 3px
+    right: 0
+    transition: all ease 0.5s
+
+  &:after
+    bottom: 3px
+
+  &:before
+    top: 0
+
+  &.active:after
+    transform: rotate(-45deg)
+    bottom: 9px
+    transition: all ease 0.5s
+    opacity: 1
+    background-color: #fff
+
+  &.active:before
+    transform: rotate(45deg)
+    top: 10px
+    opacity: 1
+    background-color: #fff
+
+  &:hover:after
+    opacity: 1
+
+  &:hover:before
+    opacity: 1
+
+  &:hover .burger
+    opacity: 1
+
+  &.active span
+    transform: scale(0)
+
+
+.header
+  &__nav
+    height: 60px
+    display: flex
+    justify-content: space-around
+    align-items: center
+    z-index: 1000
+
+    a
+      color: #fff
+
+@media (max-width: 1200px)
+  .header
+    &__dropdown
+      width: 100%
+
+@media (max-width: 991px)
+  .header
+    .close_btn_wrapper
+      display: block
+
+    &__container
+      padding: 0 16px
+      margin: 0
+      max-width: 100%
+
+    &__auth
+      &__block
+        box-shadow: 0 5px 40px rgba(54, 63, 108, 0.18)
+        background: #FFFFFF
+        color: $main_text_color
+
+        &:hover
+          background: #FFFFFF
+
+        &__wrapper
+          button
+            margin-right: 0
+
+    &_auth__btn
+      margin-top: 12px
+      margin-left: 0
+
+    &__dropdown
+      flex-direction: column
+      align-items: center
+      position: absolute
+      display: flex
+      justify-content: center
+      padding: 30px
+      height: auto
+      background: #001843
+      width: 100vw
+      z-index: 1000
+      box-shadow: rgba(0, 0, 0, .25) 0 10px 44px
+      top: 60px
+      left: 0
+
+    &__nav
+      display: flex
+      flex-direction: column
+      height: auto
+
+      a
+        margin-top: 19px
+        margin-left: 0
+
+        &:first-child
+          margin-top: 0
+
+    &__auth
+      margin: 15px 0 0 0
+      flex-direction: column
+      justify-content: center
+
+    &__mobile
+      &__right
+        display: flex
+
+
+@media (max-width: 479px)
+  .header
+    &__auth
+      &__dropdown
+        right: 0

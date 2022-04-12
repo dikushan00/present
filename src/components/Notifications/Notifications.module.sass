@@ -1,0 +1,86 @@
+@import "styles/style_vars"
+
+.notifications
+  &__wrapper
+    width: 300px
+    font-size: 16px
+    cursor: default
+
+  &__header
+    margin: 0 0 10px
+
+    .readAll
+      font-size: 13px
+      cursor: pointer
+      color: $secondary
+      font-weight: 500
+
+      &:hover
+        text-decoration: underline
+
+  &__title
+    color: $moonlight
+
+  &__list
+    overflow-y: auto
+    max-height: 300px
+
+.notification
+
+  &:hover
+    color: #4E84DA
+
+  &__item
+    padding: 12px 5px
+    border-bottom: 1px solid #ccc
+
+    &:last-child
+      border-bottom: none
+
+    &.unread
+      background-color: #eeeeee
+
+    &__title
+      font-weight: bold
+
+    &__date
+      color: $moonlight
+      font-size: 13px
+
+    &__link
+      cursor: pointer
+      color: $secondary
+
+      &:hover
+        color: $main_text_color
+
+  &__count
+    position: absolute
+    top: -3px
+    right: -7px
+    background: #FFFFFF
+    border-radius: 5px
+    color: red
+    height: 13px
+    width: 12px
+    font-size: 10px
+    font-weight: bold
+    display: flex
+    justify-content: center
+    align-items: center
+
+  &__icon
+    font-size: 20px
+    color: salmon
+    transition: color .3s
+
+    &:hover
+      color: #d54639
+
+@media (max-width: 479px)
+  .notifications
+    &__wrapper
+      right: -45px
+  .notification
+    &__block
+      position: relative

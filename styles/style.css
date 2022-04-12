@@ -1,0 +1,100 @@
+@import "animations.css";
+
+.slider__range,
+.slider__left-value,
+.slider__right-value {
+    position: absolute;
+}
+
+.slider__range {
+    border-radius: 3px;
+    height: 4px;
+}
+
+.slider__range {
+    background-color: #5DB58B;
+    z-index: 2;
+}
+
+.slider__range::before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 10px;
+    background: #fff;
+    top: -17px;
+    left: -7px;
+    box-shadow: 0 0 2px #000;
+}
+
+.slider__range::after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 10px;
+    background: #fff;
+    top: -17px;
+    right: -7px;
+    box-shadow: 0 0 2px #000;
+}
+
+.slider__left-value,
+.slider__right-value {
+    color: #dee2e6;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+.slider__left-value {
+    left: 6px;
+}
+
+.slider__right-value {
+    right: -4px;
+}
+
+.loader__wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: rgba(255, 255, 255, .08);
+}
+
+.loader__wrapper.small {
+    min-height: inherit;
+    position: initial;
+}
+
+.lds-ring {
+    width: 50px;
+    height: auto;
+}
+
+.lds-ring {
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+}
+
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+

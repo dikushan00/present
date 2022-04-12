@@ -1,0 +1,30 @@
+@import "../../../../styles/style_vars";
+
+.wrapper {
+  scrollbar-width: thin;
+  scrollbar-color: $secondary transparent;
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $secondary;
+    border-radius: 4px;
+  }
+  &:focus {
+    outline: none;
+  }
+  &::placeholder {
+    color: #000;
+  }
+  &_type_ {
+    &thin {
+      &::-webkit-scrollbar {
+        width: 2px;
+      }
+    }
+  }
+}

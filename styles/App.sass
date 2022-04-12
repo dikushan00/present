@@ -1,0 +1,1103 @@
+@import "./style_vars"
+
+body
+  background-color: $body_bg_color !important
+  font-family: $main_font !important
+  overflow-x: hidden
+
+p
+  margin-bottom: 0
+
+.app
+  &__wrapper
+    height: 100%
+    min-height: 100vh
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    background: $body_bg_color url("../public/img/bg.jpg") no-repeat fixed top
+    background-size: cover
+
+  &__content
+    background-color: rgba(25, 62, 114, .9) !important
+    padding: 1rem
+    margin-top: 60px !important
+    min-height: calc(100vh - 141px - 60px)
+
+    &.admin
+      padding: 0
+
+
+.margin
+  margin: 10px 0
+
+.icon__active
+  color: salmon
+
+.icon__white
+  color: #FFFFFF
+
+.icon__dark
+  color: #2f2f2f
+
+  &:hover
+    color: salmon
+
+.block
+  margin-top: 15px
+
+  &__wrapper
+    background: #FFF
+    border-radius: 10px
+    box-shadow: var(--main-shadow)
+    padding: 20px
+    width: 100%
+
+  &.select__city
+    padding-left: 15px
+    width: 40%
+
+.table
+  padding: 10px
+  border-collapse: separate
+  border-spacing: 15px .5em
+  margin-top: 15px
+
+  &_head
+    padding: 5px 15px
+
+  &_body
+    &_cell
+      padding: 5px 15px
+      color: $table_body_color
+      text-align: center
+
+    &_item
+      margin-top: 10px
+
+      span
+        display: block
+        height: 80%
+        width: 100%
+
+  .zonePass
+    border-left: 3px solid forestgreen
+    padding: 5px 15px 5px 12px
+
+  .zoneDeparture
+    border-left: 3px solid red
+    padding: 5px 15px 5px 12px
+
+a
+  text-decoration: none
+
+.field
+  &_card
+    position: relative
+    height: auto
+
+    &_content
+      padding: 10px
+
+      .description
+        text-align: center
+
+    &_title
+      position: absolute
+      top: 113px
+      left: 35px
+      color: #fff
+      font-size: 22px
+
+    & img
+      width: 100%
+      border-radius: 4px 4px 0 0
+      height: 50%
+      filter: brightness(80%)
+
+.title
+  &__wrapper
+    padding: 10px
+    border-radius: 7px
+    display: flex
+    align-items: center
+    color: #fff
+
+    .main
+      font-weight: bold
+      margin-top: 0
+
+    .secondary
+      font-weight: bold
+      color: $body_bg_color
+
+    h1, h2, h3, h4, h5, h6
+      margin-bottom: 0
+      color: #fff
+
+.disabled
+  color: #ccc !important
+  cursor: default !important
+  text-decoration: none !important
+//background-color: #e5e5e5 !important
+
+//&:hover
+//  background-color: #e5e5e5 !important
+
+
+.dropdown
+  position: absolute
+  right: -5px
+  margin-top: 7px
+  width: 100%
+  min-width: 180px
+  padding: 15px
+  display: flex
+  flex-direction: column
+  border-radius: 8px
+  box-shadow: var(--main-shadow)
+  background-color: #fff
+  z-index: 1000
+
+  &__item
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 3px 0
+
+    &:hover
+      a, span
+        color: #193e72
+
+    &:last-child
+      border: none
+
+.form
+  &__item
+    margin-top: 15px
+
+    & > input
+      height: 40px
+
+.select-wrapper
+  min-width: max-content
+  height: auto
+  background: #fff
+  font-style: normal
+  line-height: 22px
+  font-size: 18px
+  box-shadow: var(--main-shadow)
+  border-radius: 11px
+  z-index: 1001
+  font-family: Inter, sans-serif
+  background: var(--white-color)
+  cursor: pointer
+  color: #5699FF
+
+.select
+  width: 100%
+  height: 35px
+  font-weight: 600
+  padding: 0 20px
+  border-radius: 11px
+
+.select_list
+  position: absolute
+  padding: 7px 0 0 0
+  list-style: none
+  width: 100%
+  margin-bottom: 0
+  background: #fff
+  left: 0
+  top: 27px
+  border-radius: 0 0 11px 11px
+  z-index: 5
+
+.select_item
+  list-style: none
+  display: flex
+  align-items: center
+  justify-content: space-between
+  text-align: center
+  color: #93A7C7
+  cursor: pointer
+  padding: 12px 20px
+
+.select__icon
+  color: #363f6c !important
+  font-size: 10px
+
+.slider
+  &__main
+    height: 400px
+    position: relative
+    border-radius: 3px
+    cursor: pointer
+    z-index: -1
+
+    &__wrapper
+      padding: 0
+      cursor: pointer
+
+      div
+        pointer-events: auto !important
+
+    &__content
+      width: 100%
+      height: 100%
+      display: flex
+      padding: 30px
+      flex-direction: column
+      align-items: flex-start
+      justify-content: flex-end
+
+      .title
+        color: #FFFFFF
+        font-size: 40px
+        line-height: 40px
+        font-weight: bold
+        text-align: left
+        margin-bottom: 10px
+
+    &__description
+      color: #FFFFFF
+      font-size: 20px
+      margin-bottom: 5px
+      text-align: left
+
+
+    .slider__bg
+      position: absolute
+      height: 100%
+      width: 100%
+      object-fit: cover
+      border-radius: inherit
+      top: 0
+      left: 0
+      z-index: -1
+
+  &__nav
+    background: #eaeaea
+    padding: 0 !important
+    height: 100%
+
+    &__item
+      height: 100px
+      border: 1px solid #ccc
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 100%
+      cursor: pointer
+      background: #eaeaea
+
+      span
+        font-size: 24px
+        font-weight: bold
+
+      &.active
+        border: none
+        border-right: 7px solid #60002a
+        transition: all .3s
+
+.custom-popup
+  position: absolute
+  top: 27px
+  left: 0
+  width: auto
+  min-width: 120px
+  background-color: #fff
+  padding: 20px 10px
+  border-radius: 8px
+  box-shadow: 0 5px 15px -10px rgba(0, 0, 0, 0.25)
+  z-index: 1000
+  display: flex
+  flex-direction: column
+
+  &_item
+    padding: 8px 20px
+    display: block
+
+
+.popup_title
+  padding: 15px 0
+  border-bottom: 1px solid #ccc
+
+
+.popup_close
+  font-size: 19px
+  position: absolute
+  right: 23px
+  top: 19px
+  cursor: pointer
+
+  &:hover
+    color: #ccc
+
+.flex
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+  &.column
+    flex-direction: column
+
+  &.normal
+    justify-content: normal
+
+  &.around
+    justify-content: space-around
+
+  &.padding
+    padding: 0 15px
+
+  &.wrap
+    flex-wrap: wrap
+
+.card
+  padding: 15px
+  border-radius: 8px
+  background-color: #ffffff
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.18)
+  transition: background-color .5s
+
+  &:hover
+    background-color: #f7f7f7
+
+.logo
+  width: 38px
+  border: none
+  cursor: pointer
+
+.team__name
+  font-size: 20px
+
+.gray
+  color: #999999
+
+.gray__dark
+  color: #676767
+
+.games
+  &__wrapper
+    display: flex
+    width: 100%
+    height: auto
+    overflow-x: auto
+    padding: 15px 5px
+
+    &.overflow
+      overflow-x: auto
+
+  &__item
+    width: 240px
+    height: auto
+    margin-left: 15px
+    cursor: pointer
+
+    &__teams
+      padding: 0 9px
+
+    &__team
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: space-between
+
+      & .team__name
+        margin-top: 5px
+        max-width: 60px
+
+    &__header
+      width: 210px
+
+    &__content img
+      max-height: 60px
+      width: 60px
+
+  &__item:first-child
+    margin-left: 0
+
+  &-history
+    margin-top: 10px
+    display: flex
+    justify-content: space-evenly
+
+  &__score
+    font-size: 20px
+
+  &__team__wrapper-img
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 60px
+
+.btn
+  border: none
+  font-family: var(--inter-family)
+  transition: all .3s ease
+  z-index: 1000
+  margin-top: 15px
+
+.teams
+  &__table__logo
+    width: 30px
+    max-height: 30px
+    margin-right: 4px
+
+  &__last-games
+    display: flex
+
+  &__captain
+    position: absolute
+    right: 5px
+    top: 5px
+    color: red
+    margin-left: 7px
+    border-radius: 50%
+    font-size: 10px
+    height: 15px
+    display: flex
+    justify-content: center
+    width: 15px
+    align-items: center
+    cursor: pointer
+    border: 1px solid red
+
+  &__score__circle
+    height: 15px
+    width: 15px
+    border-radius: 50%
+    margin-left: 7px
+
+  &__score__circle:first-child
+    margin-left: 0
+
+
+.team
+  &__content
+    background: #fff
+    border-radius: 10px
+    padding: 15px 10px
+    margin-top: 19px
+
+  &__info
+    width: 100%
+    height: auto
+    display: flex
+    background: #fff
+    border-radius: 10px
+    padding: 15px
+
+    &.view
+      padding: 0
+
+    &__list
+      display: flex
+      padding: 0 10px
+
+      div
+        display: flex
+        flex-direction: column
+        margin-left: 19px
+
+        &:first-child
+          margin-left: 0
+
+        span
+          font-size: 15px
+
+      div:first-child
+        margin-left: 0
+
+    &__title
+      color: #94999f
+      font-size: 14px
+
+  &__logo
+    position: relative
+    height: 150px
+    width: 130px
+    border: 1px solid #ccc
+    border-radius: 10px
+    display: flex
+    justify-content: center
+    align-items: center
+
+    img
+      height: auto
+      max-height: 125px
+      max-width: 125px
+
+  &__matches
+    &__type
+      background-color: #cdcdcd
+      padding: 3px 15px
+      display: flex
+      align-items: center
+
+      &__img
+        width: 14px
+        margin-right: 5px
+
+    &__item
+      padding: 3px 15px
+      display: grid
+      grid-template-columns: .5fr 2fr .2fr
+      align-items: center
+
+    &__result
+      height: 20px
+      width: 20px
+      display: flex
+      justify-content: center
+      align-items: center
+      border-radius: 2px
+      color: #fff
+
+    &__teams
+      display: flex
+      flex-direction: column
+
+      .win-team
+        font-weight: bold
+
+    p
+      display: flex
+      justify-content: space-between
+      padding-right: 50%
+
+  &__flex
+    padding: 0 !important
+
+.players
+  &__stats__items
+    display: flex
+    flex-wrap: wrap
+    border-radius: 8px
+
+.stats
+  &__block
+    &__item
+      padding: 15px
+      width: 120px
+      height: 135px
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      align-items: center
+      border-right: 1px solid #d7d7d7
+      margin-top: 19px
+
+      &:last-child
+        border-right: none
+
+      &__title
+        font-size: 14px
+        font-weight: 300
+
+      .value
+        font-size: 55px
+        color: $main_color
+        font-weight: 900
+
+.match
+  display: flex
+  justify-content: center
+
+  &__content
+    margin-top: 0
+
+    &__sidebar
+      &__wrapper
+        padding-left: 15px
+        padding-right: 0
+
+  &__history
+    img
+      height: 20px
+      width: 20px
+
+    .team__name
+      margin-left: 7px
+
+    &__item
+      border-bottom: 1px solid #dadada
+      border-top: 1px solid #dadada
+      padding: 15px 10px
+
+      &.active
+        background: #e5eeff
+
+      &__teams
+        margin-top: 5px
+        width: 100%
+        display: flex
+        justify-content: space-between
+
+      &__team
+        display: flex
+        align-items: center
+
+  &__result__wrapper
+    display: flex
+    flex-direction: column
+    align-items: center
+
+  &__teams
+    display: flex
+    justify-content: space-between
+    margin-top: 20px
+    width: 80%
+
+    &__score
+      font-size: 38px
+
+      .penalty
+        font-size: 13px
+        color: #ccc
+
+  &__team
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    &__name
+      font-size: 18px
+      margin-top: 15px
+
+    &__city
+      color: $gray
+      font-size: 13px
+
+    &__logo
+      height: 120px
+      width: 120px
+
+  &__date
+    color: #36393f
+    font-size: 15px
+
+  &__point
+    color: $gray
+    font-size: 15px
+
+  &__events
+    &__wrapper
+      width: 100%
+      margin-top: 20px
+
+    &__item
+      padding-top: 3px
+      padding-bottom: 3px
+      width: 100%
+      display: flex
+
+      .match__events__item-info
+        width: 47px
+        display: flex
+
+      &.home_team
+        padding-right: calc(50% - 21px)
+        justify-content: space-between
+        padding-left: 5px
+
+        .match__events__name
+          text-align: left
+
+        .match__events__name,
+          //.match__events__score,
+        .game__card
+          margin-right: 13px
+
+        .match__events__item-info
+          justify-content: flex-end
+
+      &.away_team
+        padding-left: calc(50% - 21px)
+        padding-right: 5px
+        justify-content: space-between
+
+        .match__events__name
+          text-align: right
+
+        .match__events__name,
+        .game__card
+          margin-left: 13px
+
+        .match__events__item-info
+          justify-content: flex-start
+
+
+    &__item:nth-child(2n)
+      background: rgba(0, 0, 0, .02)
+      border-top: 1px solid #dedede
+      border-bottom: 1px solid #dedede
+
+    &__score
+      font-size: 13px
+      border: 1px solid #ccc
+      border-radius: 2px
+      padding: 0 3px
+      width: auto
+      display: flex
+      justify-content: center
+      max-height: 23px
+
+    &__time
+      font-size: 13px
+      width: 42px
+      display: flex
+      justify-content: center
+
+  &__results
+    &__wrapper
+      display: flex
+      justify-content: space-between
+      width: 100%
+
+    &__head
+      width: 100%
+      display: flex
+      justify-content: space-between
+      margin-top: 25px
+
+      .team__logo
+        width: 200px
+        height: auto
+        border: none
+
+        &__wrapper
+          height: 200px
+          display: flex
+          justify-content: center
+          align-items: center
+
+      .team__name
+        font-size: 25px
+        font-weight: bold
+        margin-top: 17px
+        text-align: center
+
+    &__team
+      display: flex
+      flex-direction: column
+      align-items: center
+      width: 50%
+
+    &__stat
+      display: flex
+      flex-direction: column
+      align-items: center
+      margin-top: 40px
+
+    &__score
+      width: 100%
+      display: flex
+      justify-content: space-around
+      margin-top: 25px
+
+      div
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+
+      &__input
+        width: 100px
+        height: 72px
+        border-radius: 4px
+        font-size: 60px
+        font-weight: bold
+        display: flex
+        justify-content: center
+        align-items: center
+        text-align: center
+        box-shadow: 0 0 9px #c0c0c0
+
+    &__events
+      width: 100%
+      margin-top: 25px
+
+      &__items
+        margin-top: 10px
+        display: none
+
+        &.collapsed
+          display: block
+
+      .players__goals__count__ball
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+
+        img
+          height: 20px
+          width: 20px
+          margin-left: 10px
+          margin-top: 5px
+
+      table, tr > th
+        background: #fff
+
+      .match__goals__btn
+        background: none
+        border: none
+        transition: color .4s
+
+        &.minus
+          color: red
+
+          &:hover
+            color: #b70202
+
+        &.plus
+          color: green
+
+          &:hover
+            color: #005600
+
+    &__collapse
+      display: flex
+      justify-content: center
+      align-items: center
+      padding: 10px 0
+      margin-top: 20px
+      background: #f9f9f9
+      cursor: pointer
+
+      i
+        margin-left: 5px
+
+  &__lineup
+    &__item
+      height: 42px
+      padding: 0 8px
+      width: 100%
+      display: flex
+      align-items: center
+      justify-content: space-between
+      border-radius: 7px
+
+      &:nth-child(2n)
+        background-color: rgba(220, 220, 220, .5)
+
+      p
+        font-weight: 500
+
+.ant-table,
+.ant-table-container,
+.ant-table-content
+  border-radius: 10px
+
+.dark__table
+  .ant-table-container,
+  .ant-table table
+    background: none !important
+    border: none !important
+    color: #fff !important
+
+  .ant-table,
+  .ant-table-thead > tr > th,
+  .ant-table-tbody > tr > td
+    background: rgba(0, 2, 83, 0.9) !important
+    border: none !important
+    color: #fff !important
+
+  a,
+  .ant-empty-description
+    color: #fff !important
+
+.request
+  &__wrapper
+    padding-top: 4px
+
+  &__btn__wrapper
+    margin-top: 15px
+
+.playground__avatar
+  width: 100%
+
+.bold
+  font-weight: bold
+
+.win
+  background-color: #44ac45
+
+.draw
+  background-color: #ffb22f
+
+.defeat
+  background-color: #eb3f30
+
+.cursor__pointer
+  cursor: pointer
+
+.center
+  display: flex
+  justify-content: center
+
+.material
+  background: #fff
+  border-radius: 10px
+  padding: 15px 10px
+
+.block__margin
+  margin-top: 19px
+
+.row
+  flex-wrap: nowrap
+
+.relative
+  position: relative
+
+.game__card
+  height: 20px
+  width: 15px
+  border-radius: 4px
+
+  &__yellow
+    background: #ffe62d
+
+  &__red
+    background: #d90f0f
+
+.error-page
+  &__wrapper
+    color: #FFFFFF
+
+@media (max-width: 991px)
+  .match
+    &__content
+      max-width: 100%
+
+      &__sidebar
+        &__wrapper
+          padding-left: 0
+          margin-top: 15px
+          max-width: 100%
+
+    &__history
+      display: flex
+      max-width: 100%
+      overflow-x: auto
+
+      &__item
+        width: 170px
+        max-width: 170px
+        min-width: 170px
+
+    &__row
+      flex-direction: column !important
+  .team
+    &__info
+      &__list
+        flex-wrap: wrap
+
+  .title
+    &__wrapper
+      h1
+        font-size: 20px
+        margin-top: 0
+  .match
+    &__results
+      &__head
+        & .team__logo
+          width: 125px
+
+      &__content
+        padding: 0
+  .block
+    &.select__city
+      padding-left: 0
+
+
+@media (max-width: 768px)
+  .match
+    &__results
+      &__wrapper
+        flex-direction: column
+
+@media (max-width: 576px)
+
+  .match
+    &__events
+      &__item
+        &.home_team
+          padding-left: 0
+
+          .match__events__name
+            margin-right: 0
+
+        &.away_team
+          padding-right: 0
+
+          .match__events__name
+            margin-left: 0
+
+    &__team
+      &__logo
+        max-height: 80px
+        width: 80px
+
+    &__results
+      &__head
+        & .team__logo
+          width: 80px
+          max-height: 80px
+
+        .team__logo__wrapper
+          height: 100px
+
+      &__title
+        text-align: center
+
+      &__score
+        &__input
+          width: 50px
+          height: 50px
+  .teams,
+  .players
+    margin-top: 10px
+  .teams
+    &__score
+      &__circle
+        width: 12px
+        height: 12px
+        margin-left: 2px
+
+  .team
+    &__info
+      &__list
+        flex-direction: column
+
+        div
+          margin-left: 0
+
+    &__logo
+      max-width: 90px
+      max-height: 110px
+
+      img
+        max-height: 100px
+        max-width: 80px
+  .ant-popover-arrow
+    display: none !important
+
+@media (max-width: 480px)
+  .slider
+    &__main
+      &__content
+        padding: 35px 15px
+
+      &__description
+        font-size: 16px
+
+      .title
+        font-size: 26px
+        line-height: 30px
+
+@media (max-width: 400px)
+  .btn__w-icon
+    .btn__text
+      display: none
